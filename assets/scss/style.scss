@@ -1,3 +1,7 @@
+@import 'variables';
+
+
+
 .topNavbar {
     & .link {
         & a {
@@ -16,9 +20,21 @@
 .heroText {
     font-size: 38px;
     letter-spacing: 3px;
+    @include max-xl {
+        font-size: 32px;
+    }
+    @include max-lg {
+        font-size: 30px;
+    }
+    @include max-md {
+        font-size: 26px;
+    }
+    @include max-sm {
+        font-size: 5vw;
+    }
 }
 .videoAnimateSection {
-    height: 100vh;
+    height: 100vh !important;
     & .leftImgOuter {
         position: absolute;
         top: 50%;
@@ -28,6 +44,10 @@
         & .imgBox {
             width: 100%;
             & img {}
+        }
+        @include max-lg {
+            width: 28%;
+            left: 20px;
         }
     }
     & .rightImgOuter {
@@ -40,6 +60,10 @@
             width: 100%;
             & img {}
         }
+        @include max-lg {
+            width: 28%;
+            right: 20px;
+        }
     }
     & .rightImgOuter2 {
         position: absolute;
@@ -47,6 +71,9 @@
         right: 0%;
         transform: translateY(-50%);
         width: 12.5%;
+        @include max-sm {
+            width: 50%;
+        }
         & .imgBox {
             width: 100%;
             & img {}
@@ -58,6 +85,9 @@
         left: 0%;
         transform: translateY(-50%);
         width: 12.5%;
+        @include max-sm {
+            width: 50%;
+        }
         & .imgBox {
             width: 100%;
             & img {}
@@ -70,6 +100,9 @@
         transform: translate(-50%, -50%);
         width: 33.33%;
         z-index: 5;
+        @include max-sm {
+            width: 50%;
+        }
         & .videoInner {
             &::before {
                 content: '';
@@ -93,6 +126,18 @@
                 line-height: 110%;
                 font-family: emoji;
                 z-index: 2;
+                @include max-xl {
+                    width: 500px;
+                    font-size: 90px;
+                }
+                @include max-md {
+                    width: 450px;
+                    font-size: 75px;
+                }
+                @include max-sm {
+                    width: 90%;
+                    font-size: 18vw;
+                }
             }
         }
     }
