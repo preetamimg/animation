@@ -12,18 +12,21 @@
     <div class="container-fluid topNavbar py-3">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-4">
+                <div class="col-4 d-none d-md-block">
                     <ul class="list-unstyled m-0 p-0 d-flex align-items-center">
                         <li class="link"><a href="javascript:;">Home</a></li>
                         <li class="link ps-4"><a href="javascript:;">Collections</a></li>
                     </ul>
                 </div>
-                <div class="col-4 d-flex justify-content-center">
+                <div class="col-md-4 d-flex justify-content-between justify-content-md-center align-items-center">
                     <a href="javascript:;" class="logo">
                         <img src="./assets/images/logo.svg" alt="logo">
                     </a>
+                    <div class="meuIcon d-flex d-md-none flex-column">
+                        <span></span><span></span>
+                    </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4 d-none d-md-block">
                     <ul class="list-unstyled m-0 p-0 d-flex align-items-center justify-content-end">
                         <li class="link"><a href="javascript:;">Curators</a></li>
                         <li class="link ps-4"><a href="javascript:;">Journal</a></li>
@@ -47,12 +50,12 @@
 
     <div class="container-fluid overflow-hidden videoAnimateSection px-0">
         <div class="position-relative h-100">
-            <div class="leftImgOuter2 d-sm-none d-lg-block">
+            <div class="leftImgOuter2 d-none d-xl-block">
                 <div class="imgBox">
                     <img src="./assets/images/l1.jpg" alt="image" class="w-100 h-100 object-fit-cover">
                 </div>
             </div>
-            <div class="leftImgOuter d-none d-sm-block">
+            <div class="leftImgOuter d-none d-md-block">
                 <div class="imgBox mb-4">
                     <img src="./assets/images/p1.jpg" alt="image" class="w-100 h-100 object-fit-cover">
                 </div>
@@ -68,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <div class="rightImgOuter d-none d-sm-block">
+            <div class="rightImgOuter d-none d-md-block">
                 <div class="imgBox mb-4">
                     <img src="./assets/images/p3.jpg" alt="image" class="w-100 h-100 object-fit-cover">
                 </div>
@@ -76,7 +79,7 @@
                     <img src="./assets/images/p4.jpg" alt="image" class="w-100 h-100 object-fit-cover">
                 </div>
             </div>
-            <div class="rightImgOuter2 d-sm-none d-lg-block">
+            <div class="rightImgOuter2 d-none d-xl-block">
                 <div class="imgBox">
                     <img src="./assets/images/l2.jpg" alt="image" class="w-100 h-100 object-fit-cover">
                 </div>
@@ -89,7 +92,10 @@
     <script src="./assets/libs/gsap/ScrollTrigger.min.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
-        // for video width increasing
+
+        let mm = gsap.matchMedia();
+        mm.add("(min-width: 768px)", () => {
+            // for video width increasing
         gsap.to('.videoOuter', {
             scrollTrigger: {
                 trigger: '.videoAnimateSection',
@@ -150,7 +156,7 @@
             right: '-300px',
             opacity: 0
         })
-        
+        });
     </script>
 </body>
 </html>
