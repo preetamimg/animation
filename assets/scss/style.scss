@@ -28,6 +28,7 @@
 }
 .heroText {
     font-size: 38px;
+    // line-height: 0;
     letter-spacing: 3px;
     @include max-xl {
         font-size: 32px;
@@ -148,6 +149,55 @@
                 @include max-sm {
                     width: 330px;
                     font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+.mainHeading {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.para {
+    font-size: 20px;
+}
+
+.scrollSection {
+    & .horizontalCard {
+        width: 385px;
+        height: 540px;
+        & .bgImg {}
+        & .descBox {
+            background-color: rgba(0,0,0, 0.5);
+            color: rgba(255, 255, 255, 0.8);
+            & .label {
+                font-size: 13px;
+                & span {
+                    color: red;
+                }
+            }
+            & .head {
+                font-size: 26px;
+            }
+            & .text {
+                font-size: 14px;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            & .arrow {
+                height: 50px;
+                width: 50px;
+                border: 2px solid white;
+                margin-left: 15px;
+                border-radius: 50%;
+                & img {
+                    height: 24px;
                 }
             }
         }
