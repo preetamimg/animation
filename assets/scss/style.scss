@@ -101,7 +101,7 @@
         width: 33.33%;
         z-index: 5;
         @include max-sm {
-            width: 50% !important;
+            width: 50%;
         }
         & .videoInner {
             &::before {
