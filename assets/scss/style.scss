@@ -30,7 +30,7 @@
         font-size: 26px;
     }
     @include max-sm {
-        font-size: 5vw;
+        font-size: 20px;
     }
 }
 .videoAnimateSection {
@@ -72,7 +72,7 @@
         transform: translateY(-50%);
         width: 12.5%;
         @include max-sm {
-            width: 50%;
+            width: 40% !important;
         }
         & .imgBox {
             width: 100%;
@@ -86,7 +86,7 @@
         transform: translateY(-50%);
         width: 12.5%;
         @include max-sm {
-            width: 50%;
+            width: 40% !important;
         }
         & .imgBox {
             width: 100%;
@@ -101,7 +101,7 @@
         width: 33.33%;
         z-index: 5;
         @include max-sm {
-            width: 50%;
+            width: 50% !important;
         }
         & .videoInner {
             &::before {
@@ -135,8 +135,8 @@
                     font-size: 75px;
                 }
                 @include max-sm {
-                    width: 90%;
-                    font-size: 18vw;
+                    width: 330px;
+                    font-size: 60px;
                 }
             }
         }
