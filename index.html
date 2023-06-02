@@ -328,13 +328,11 @@
 
         const container = document.querySelector('.scrollSection');
         const sections = gsap.utils.toArray('.scrollSection .scrollCol');
-        // const animSections = gsap.utils.toArray('.animSection')
-        // const anim = gsap.utils.toArray('.anim')
 
         let scrollTween = gsap.to(sections, {
             scrollTrigger: {
                 trigger: '.scrollSection',
-                // start: 'top top',
+                start: 'top top',
                 scrub: 1,
                 pin: '.scrollSection',
                 end : '+=3000'

@@ -166,39 +166,50 @@
 }
 
 .scrollSection {
-    & .horizontalCard {
-        width: 385px;
-        height: 540px;
-        & .bgImg {}
-        & .descBox {
-            background-color: rgba(0,0,0, 0.5);
-            color: rgba(255, 255, 255, 0.8);
-            & .label {
-                font-size: 13px;
-                & span {
-                    color: red;
+    & .scrollCol {
+        min-width: 385px;
+        & .horizontalCard {
+            min-width: 385px;
+            width: 385px;
+            height: 540px;
+            & .bgImg {}
+            & .descBox {
+                background-color: rgba(0,0,0, 0.5);
+                color: rgba(255, 255, 255, 0.8);
+                & .label {
+                    font-size: 13px;
+                    & span {
+                        color: red;
+                    }
+                }
+                & .head {
+                    font-size: 26px;
+                }
+                & .text {
+                    font-size: 14px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                & .arrow {
+                    height: 50px;
+                    width: 50px;
+                    border: 2px solid white;
+                    margin-left: 15px;
+                    border-radius: 50%;
+                    & img {
+                        height: 24px;
+                    }
                 }
             }
-            & .head {
-                font-size: 26px;
-            }
-            & .text {
-                font-size: 14px;
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            & .arrow {
-                height: 50px;
-                width: 50px;
-                border: 2px solid white;
-                margin-left: 15px;
-                border-radius: 50%;
-                & img {
-                    height: 24px;
-                }
+        }
+        @include max-sm {
+            min-width: 350px;
+            & .horizontalCard {
+                min-width: 350px;
+                width: 350px;
             }
         }
     }
