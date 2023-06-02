@@ -15,7 +15,7 @@
         & img {
             height: 90px;
             @include max-md {
-                height: 20px !important;
+                height: 40px !important;
             }
         }
     }
